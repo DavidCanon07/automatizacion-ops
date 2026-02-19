@@ -1,3 +1,4 @@
-@echo
-python "C:\ruta_proyecto\Prevalidador\pre-validador.py"
+@echo off
+cd /d "%~dp0"
+python pre-validador.py
 pause
