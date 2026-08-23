@@ -205,3 +205,30 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# ---------------------------------------------------------------------------
+# Proyecto OPS: evitar que archivos de salida/datos reales del proceso
+# (generados en cada ejecución, con información real de cuentas/operaciones)
+# terminen versionados por accidente. Las plantillas base en
+# Validador/estructuras_base/ (Estructura_*.xlsx) SÍ se versionan.
+# ---------------------------------------------------------------------------
+.vscode/
+
+# Archivos de pruebas/carga con datos reales (no deben commitearse)
+**/formato_ops_pruebas/
+**/*FORMATO OPS ESTRUCTURA*con info*.xlsx
+
+# Entregables generados dinámicamente por el programa (llevan fecha en el nombre)
+**/FORMATO OPS [0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9].xlsx
+**/Solicitud OPS [0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9].xlsx
+**/Detalle_LATAM_SODIMAC_FALABELLA_MERCADO PAGO_*.xlsx
+**/OPS [0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9].txt
+**/temp_archivos_unificados*.xlsx
+**/ALERTA_DUPLICADOS_historico*.xlsx
+
+# Logs de ejecución (pueden contener datos reales de cuentas)
+**/errores.txt
+**/log.txt
+
+# Empaquetados/builds (redundantes con el código fuente, no deben versionarse)
+*.zip
